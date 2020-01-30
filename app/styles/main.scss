@@ -1,0 +1,22 @@
+// Globals
+@import 'globals/variable';
+@import 'globals/reset';
+@import 'globals/fonts';
+@import 'globals/text';
+@import 'globals/scaffolding';
+@import 'globals/mixins';
+
+// Components
+@import 'components/carousel';
+
+// Includes
+@import 'includes/header';
+@import 'includes/sidemenu';
+@import 'includes/footer';
+
+// Helper
+
+// Pages
+@import 'pages/home';
+
+// Customize

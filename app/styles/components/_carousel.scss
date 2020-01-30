@@ -1,0 +1,19 @@
+%slickConfig {
+	&.slick-initialized {
+		visibility: visible;
+		max-height: none;
+	}
+	&.slick-slider {
+		overflow: hidden;
+	}
+}
+
+.re-main-carousel {
+	@extend %slickConfig;
+	.item {
+		width: inherit;
+		height: calc(100vh - 70px);
+		background-position: bottom;
+		background-size: cover;
+	}
+}
