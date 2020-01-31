@@ -17,3 +17,19 @@
 		background-size: cover;
 	}
 }
+
+.re-partner-carousel {
+	width: 85%;
+	@extend %slickConfig;
+	.slick-slide {
+		margin: 10px;
+	  }
+	  .slick-list {
+		margin: -10px;
+	  }
+  
+	.thumb {
+		display: flex;
+		justify-content: center;
+	}
+}

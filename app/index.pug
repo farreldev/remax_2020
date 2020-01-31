@@ -3,10 +3,89 @@ extends layouts/default
 block content
 	section.home
 		.hero-banner
-			.re-main-carousel
+			.partner-panel.d-flex.flex-column.justify-content-between.align-items-center
+				.partner-wrapper.show
+					a(href="#" rel="toggle-open").partner-open.text-center Our Panel
+					.arrowNavigation
+						a.prevArrowNav
+						a.nextArrowNav
+					.re-partner-carousel#slide-partner
+						.thumb
+							img(src="images/partner/rmh123.png", alt="")
+						.thumb
+							img(src="images/partner/uob.png", alt="")
+						.thumb
+							img(src="images/partner/paninbank.png", alt="")
+						.thumb
+							img(src="images/partner/ocbc.png", alt="")
+						.thumb
+							img(src="images/partner/mpm-finance.png", alt="")
+						.thumb
+							img(src="images/partner/mnc-bank.png", alt="")
+						.thumb
+							img(src="images/partner/mandiri.png", alt="")
+						.thumb
+							img(src="images/partner/kpr-bri.png", alt="")
+						.thumb
+							img(src="images/partner/mpm-finance.png", alt="")
+						.thumb
+							img(src="images/partner/mnc-bank.png", alt="")
+
+			.banner-greeting.d-flex.flex-column.justify-content-center.align-items-center
+				img.mb-4(src="images/maskot.png", alt="")
+				h1.text-center.mb-3 Find a home that's right for you
+				p.mb-4.text-center.lead Don't worry, we've done this many times. That's the sign of a RE/MAX agent
+				.home-search
+					.form-wrapper.d-flex.justify-content-between
+						img(src="images/magnify.png", alt="")
+						input(type="text" placeholder="Find your dream home location")
+						.btn-group.main-search
+							a.btn.btn-primary.dropdown-toggle(href='#', data-toggle='dropdown') All Service
+							.dropdown-menu
+								a.dropdown-item(href='#') For Rent
+								a.dropdown-item(href='#') For Sale
+			.re-main-carousel#main-hero-slider
 				.item(style="background-image: url('images/banner/slide1.jpg')")
+				.item(style="background-image: url('images/banner/slide2.jpg')")
 
 
 block scripts
 	script.
-		$('sdfsd')
+		$(function() {
+
+			$('[rel=toggle-open]').on('click', function(e) {
+				e.preventDefault();
+				$(this).toggleClass('partner-open');
+				$(this).parent().toggleClass('show');
+			})
+
+			$('.dropdown-item').on('click', function(e) {
+				e.preventDefault();
+				let langId = $(this).text();
+				$('.btn-group.lang').children('.dropdown-toggle').text(langId)
+			})
+
+			$('#main-hero-slider').slick({
+				autoplay: true,
+				speed: 1500,
+				pauseOnFocus: false,
+				autoplaySpeed: 7000,
+				fade: true,
+				cssEase: 'ease',
+				arrows: false
+			});
+
+			$('#slide-partner').slick({
+				autoplay: true,
+				speed: 1500,
+				slidesToShow: 6,
+				slidesToScroll: 1,
+				pauseOnFocus: false,
+				autoplaySpeed: 3000,
+				//- variableWidth: true,
+				cssEase: 'ease',
+				prevArrow: '.prevArrowNav',
+				nextArrow: '.nextArrowNav',
+				arrows: true
+			});
+		})

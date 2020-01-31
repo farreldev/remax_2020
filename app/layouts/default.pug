@@ -31,14 +31,17 @@ html.no-js(lang='')
 				a(href='http://browsehappy.com/') upgrade your browser
 				|  to improve your experience.
 		.wrapper
+			include ../includes/header
+			include ../includes/btn-humburger
 			include ../includes/sidemenu
+			include ../includes/main-nav-menu
 			main
-				include ../includes/header
 				block content
 			include ../includes/footer
 		// build:js scripts/vendor.js
 		script(type='text/javascript', src='/node_modules/jquery/dist/jquery.min.js')
-		script(type='text/javascript', src='/node_modules/bootstrap/dist/js/bootstrap.min.js')
+		//- script(type='text/javascript', src='/node_modules/bootstrap/dist/js/bootstrap.min.js')
+		script(type='text/javascript', src='/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
 		script(type='text/javascript', src='/node_modules/slick-carousel/slick/slick.min.js')
 		// endbuild
 		// build:js scripts/main.js

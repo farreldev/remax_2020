@@ -1,0 +1,52 @@
+// Button Dropdown
+.btn-group {
+    .btn {
+        font-family: $font2;
+        font-size: 15px;
+    }
+    &.main-search {
+        .btn {
+            padding: .375rem 1rem;
+            border-radius: 50px;
+            &-primary {
+                background-color: $color-brand-red;
+                border: none;
+                &:hover, &:focus {
+                    background-color: darken($color-brand-red, 7);
+                }
+            }
+            &.dropdown-toggle::before {
+                display: inline-block;
+                margin-right: .755em;
+                vertical-align: .155em;
+                content: "";
+                border-top: .3em solid;
+                border-right: .3em solid transparent;
+                border-bottom: 0;
+                border-left: .3em solid transparent;
+            }
+            &.dropdown-toggle::after {
+                display: none;
+            }
+        }
+        &.show > .btn-primary.dropdown-toggle {
+            background-color: darken($color-brand-red, 7);
+        }
+    }
+
+    &.lang {
+        .btn {
+            font-weight: 600;
+            text-decoration: none;
+            color: $color-brand-blue;
+            &.dropdown-toggle::after {
+                margin-left: .455em;
+                margin-bottom: 1px;
+            }
+        }
+        .dropdown-menu {
+            min-width: auto
+        }
+    }
+
+}
