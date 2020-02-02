@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
 
   @for $i from 1 through 6 {
     h#{1 * $i} {
-      font-size: #{48 - (8 * ($i - 1))}px;
+      font-size: #{40 - (8 * ($i - 1))}px;
     }
   }
 
