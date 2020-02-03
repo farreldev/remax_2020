@@ -1,0 +1,106 @@
+extends layouts/default
+include includes/mixins/main-nav-menu
+
+block navigasi
+	+activeMenu(1)
+
+block content
+	.about
+		section.intro
+			.intro-content
+				h3.titleSection.mb-5 Introduction
+				.container-fluid.p-0
+					.row
+						.col.col-5
+							article
+								p RE/MAX International (NYSE: RMAX) is a real estate company based in Denver Colorado, USA. RE/MAX was founded in 1973 and expanded rapidly through franchise membership system. To date, its founders Dave and Gail Liniger is still active in the business and hold strategic position in the expansion of RE/MAX worldwide.
+
+								p RE/MAX was founded on a dream, where in each encounters, its agents will provide best services and achieve maximum results. Through this dream, the property industry has been changed forever.
+
+								p RE/MAX believes in maximum concept. When it is combined with world-class training and technological advantages, it will attract and became a powerful tool to agents (MA) and business owners (BO) who are highly efficient and extremely motivated to succeed.
+
+								p At the beginning of its growth, RE/MAX expanded rapidly in the United States and Canada with a market share of more than 40%. Furthermore, the network RE/MAX has gone beyond borders and continents, and has been accepted and highly trusted in many countries. Now RE/MAX has grown into a global real estate powerhouse with presence in more than 115 countries, over 7,600 offices and is supported by more than 125,000 trusted marketing associates.
+						.col.col-7
+							.about-figure
+								.arrowNavAbout
+									.counter-about-figure
+										strong 01
+									a.prevArrowNavAbout
+									a.nextArrowNavAbout
+								.re-about-carousel#slide-about
+									.item(style="background-image: url('images/banner/slide-about1.jpg')")
+									.item(style="background-image: url('images/banner/slide-about2.jpg')")
+		section.ceo
+			.letter-ceo-content
+				h3.titleSection.mb-5 Letter From CEO
+				.container-fluid.p-0
+					.row
+						.col.col-6
+							article
+								p RE/MAX, an acronym for Real Estate Maximum has presence in more than 115 countries and has more than 125,000 strong marketing associate or most commonly known, real estate agents. Outside the United States alone, RE/MAX has over 25,000 marketing associate and is growing rapidly. With our strong network throughout the world, we are ready to welcome the competitive world of real estate as the number 1 and most trusted real estate broker in Indonesia
+
+								p RE/MAX has always put customer satisfaction above all else through profesionalism and highest level of trust. If you want to be a successful real estate agent or business owner, join us now!.
+
+								p Since its establishment in 2014, RE/MAX Indonesia has presence in major cities including the Greater Jakarta area, Bandung, Palembang, Bali and Surabaya. With the vision to be the best in real estate, we believe that the service provided by a capable marketing associate will create opportunities that bring maximum results to all parties. Only  then, Real Estate maximum occurs. Let the most trusted property agent help you with your property needs. Now is time to buy property! With RE/MAX, Everybody Wins!
+						.col.col-6.d-flex.justify-content-center.align-items-center
+							.fotoCeo
+								figure.imgCeo.text-center
+									img(src="images/ceo_monica.png", alt="" class="d-block mx-auto")
+		section.visi-misi
+			.visi-misi-content(style="background-image: url('images/visi-bg.jpg')")
+				.taggar
+					strong #StrongerTogether #UniteGrowWin!
+				.visi-misi-group
+					.visi.mr-5
+						strong Visi
+						p To be the best in real estate by creating opportunities, providing best services and achieving maximum results
+					.misi
+						strong Misi
+						p To create environment for people to be as successfull as they want to be
+		section.team
+			.container-fluid.p-0
+				.row.mb-5
+					.col.col-5
+						h3.titleSection.mb-5 Meet Our Leader
+					.col.col-7
+						p Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus.
+			.profile
+				.item
+					figure
+						img(src="https://i.pravatar.cc/320?u=a042581f4e29026704d", alt="")
+					.info-profile
+						strong.mb-2 Name Person
+						small.mb-3 Info Jabatan
+						ul
+							li
+								a(href="#")
+									i.fa.fa-facebook
+							li
+								a(href="#")
+									i.fa.fa-twitter
+							li
+								a(href="#")
+									i.fa.fa-google-plus
+				.item
+					figure
+						img(src="https://i.pravatar.cc/320?u=a142581f4e25026704a", alt="")
+				.item
+					figure
+						img(src="https://i.pravatar.cc/320?u=d042281f1e27331704d", alt="")
+				.item
+					figure
+						img(src="https://i.pravatar.cc/320?u=a133370f4e29026704d", alt="")
+				.item
+					figure
+						img(src="https://i.pravatar.cc/320?u=a042581f4e29026104d", alt="")
+				.item
+					figure
+						img(src="https://i.pravatar.cc/320?u=a730051d7a71186104d", alt="")
+				.item
+					figure
+						img(src="https://i.pravatar.cc/320?u=a142779e2129026104d", alt="")
+				.item
+					figure
+						img(src="https://i.pravatar.cc/320?u=a044581f4e29026184d", alt="")
+block scripts
+	script.

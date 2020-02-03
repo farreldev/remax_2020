@@ -28,12 +28,13 @@ body {
     overflow-y: auto;
     main {
       position: relative;
-      padding-top: 50px;
-      margin-left: 50px;
+      padding-top: 60px;
+      margin-left: 60px;
       margin-right: auto;
-      background-color: white;
-      width: calc(100% - 50px);
       height: 100vh;
+      width: calc(100% - 60px);
+      box-sizing: border-box;
+      background-color: white;
     }
   }
 }

@@ -8,7 +8,9 @@ html.no-js(lang='')
 		link(rel='apple-touch-icon', href='apple-touch-icon.png')
 		// Place favicon.ico in the root directory
 
-		link(href='https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700|Playfair+Display:500,700&display=swap', rel='stylesheet')
+		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+
+		link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Playfair+Display:500,700&display=swap', rel='stylesheet')
 		
 		// build:css styles/vendor.css
 		link(rel='stylesheet', href='/node_modules/bootstrap/dist/css/bootstrap.min.css', type='text/css')
@@ -22,6 +24,8 @@ html.no-js(lang='')
 		// build:js scripts/modernizr.js
 		script(src='scripts/modernizr.js')
 		// endbuild
+
+
 	body
 		//if IE
 			p.browserupgrade
@@ -34,7 +38,8 @@ html.no-js(lang='')
 			include ../includes/header
 			include ../includes/btn-humburger
 			include ../includes/sidemenu
-			include ../includes/main-nav-menu
+			block navigasi
+			//- include ../includes/main-nav-menu
 			main
 				block content
 			include ../includes/footer

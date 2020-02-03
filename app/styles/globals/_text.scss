@@ -1,22 +1,47 @@
 h1, h2, h3, h4, h5, h6 {
-    font-family: $font1;
-    font-weight: 700;
-    letter-spacing: normal;
-    line-height: 1.2;
-    color: $color-deep-dark;
-  }
+  position: relative;
+  font-family: $font1;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: 1.2;
+  color: $color-deep-dark;
+}
 
-  @for $i from 1 through 6 {
-    h#{1 * $i} {
-      font-size: #{40 - (8 * ($i - 1))}px;
+h3 {
+  &.titleSection {
+    padding-bottom: 10px;
+    font-family: $font1;
+    color: $color-brand-blue;
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 20px;
+      height: 2px;
+      background-color: $color-brand-red;
     }
   }
+}
+  
 
-  p, a, span, strong {
-      font-family: $font2;
-      font-size: 16px;
-      line-height: 1.7;
-      letter-spacing: .5px;
-      font-weight: 300;
-      color: $color-dark-grey;
+@for $i from 1 through 6 {
+  h#{1 * $i} {
+    font-size: #{40 - (8 * ($i - 1))}px;
   }
+}
+
+p, a, span, strong {
+  font-family: $font2;
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: .5px;
+  font-weight: 300;
+  color: $color-dark-grey;
+}
+
+article {
+  p {
+    margin-bottom: 20px;
+  }
+}

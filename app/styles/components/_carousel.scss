@@ -12,7 +12,20 @@
 	@extend %slickConfig;
 	.item {
 		width: inherit;
-		height: calc(100vh - 50px);
+		height: calc(100vh - 60px);
+		// height: 100vh;
+		background-position: bottom;
+		background-size: cover;
+	}
+}
+
+.re-about-carousel {
+	@extend %slickConfig;
+	@include boxBigShadow;
+	.item {
+		width: inherit;
+		height: 450px;
+		// height: 100vh;
 		background-position: bottom;
 		background-size: cover;
 	}

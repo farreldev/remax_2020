@@ -1,0 +1,11 @@
+mixin activeMenu(x)
+	.main-nav-menu
+		.top
+			ul
+				each val, iD in ['Home', 'About', 'Join Us Now!', 'Associates', 'Albums', 'Properties', 'Contact Us']
+					li
+						if iD==x
+							a(href="#" class="current")= val
+						else
+							a(href="#")= val
+		.bottom

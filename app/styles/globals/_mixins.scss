@@ -22,6 +22,48 @@
   }
 }
 
+@mixin transparentBg {
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%);
+    z-index: 1;
+  }
+}
+
+@mixin flexOwnGrid($child, $kol, $mr, $mb) { // Mixing ini digunakan di parentnya
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	list-style: none; // jika elem parentnya ul
+	#{$child} {
+		margin-right: $mr;
+		margin-bottom: #{$mb};
+		width: ((100% - (($kol - 1) * $mr)) / $kol);
+		&:nth-child(#{$kol}n) {
+			margin-right: 0;
+		}
+	}
+}
+
+@mixin midBigShadow {
+  box-shadow: 0 35px 50px -30px rgba(0, 0, 0, 0.35);
+}
+
+@mixin boxBigShadow {
+  box-shadow: 0 55px 50px -30px rgba(0, 0, 0, 0.35);
+}
+
+@mixin verticalGradient {
+  background: rgb(242,78,26);
+  background: linear-gradient(0deg, rgba(242,78,26,1) 0%, rgba(222,32,48,1) 100%);
+}
+
 @mixin italicPlaceholder {
   ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: $color-grey;

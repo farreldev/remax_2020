@@ -1,4 +1,8 @@
 extends layouts/default
+include includes/mixins/main-nav-menu
+
+block navigasi
+	+activeMenu(0)
 
 block content
 	section.home
@@ -32,7 +36,7 @@ block content
 							img(src="images/partner/mnc-bank.png", alt="")
 
 			.banner-greeting.d-flex.flex-column.justify-content-center.align-items-center
-				img.mb-4(src="images/maskot.png", alt="")
+				img.mb-4(src="images/maskot.png", alt="" onclick="App.tes()")
 				h1.text-center.mb-2 Find a home that's right for you
 				p.mb-4.text-center.lead Don't worry, we've done this many times. That's the sign of a RE/MAX agent
 				.home-search
@@ -51,41 +55,3 @@ block content
 
 block scripts
 	script.
-		$(function() {
-
-			$('[rel=toggle-open]').on('click', function(e) {
-				e.preventDefault();
-				$(this).toggleClass('partner-open');
-				$(this).parent().toggleClass('show');
-			})
-
-			$('.dropdown-item').on('click', function(e) {
-				e.preventDefault();
-				let langId = $(this).text();
-				$('.btn-group.lang').children('.dropdown-toggle').text(langId)
-			})
-
-			$('#main-hero-slider').slick({
-				autoplay: true,
-				speed: 1500,
-				pauseOnFocus: false,
-				autoplaySpeed: 7000,
-				fade: true,
-				cssEase: 'ease',
-				arrows: false
-			});
-
-			$('#slide-partner').slick({
-				autoplay: true,
-				speed: 1500,
-				slidesToShow: 6,
-				slidesToScroll: 1,
-				pauseOnFocus: false,
-				autoplaySpeed: 3000,
-				//- variableWidth: true,
-				cssEase: 'ease',
-				prevArrow: '.prevArrowNav',
-				nextArrow: '.nextArrowNav',
-				arrows: true
-			});
-		})
