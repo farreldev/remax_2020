@@ -16,6 +16,7 @@
                     display: block;
                     padding: 7px 5px;
                     text-decoration: none;
+                    text-transform: Capitalize;
                     &.current {
                         &:after {
                             position: absolute;

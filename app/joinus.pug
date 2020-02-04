@@ -1,0 +1,40 @@
+extends layouts/default
+include includes/mixins/main-nav-menu
+
+block navigasi
+	+activeMenu(2)
+
+block content
+	.joinus
+		section.whyus(style="background-image: url('images/whyus.jpg')")
+			.whyus-content.d-flex.flex-column.justify-content-center
+				h3.titleSection.light.mb-5 Why Us
+				.why-point
+					.item
+						p.lead.mb-3 Real Estate Leader
+						p Across the world, the network of RE/MAX is in more than 115 countries and supported by more than 125,000
+						a(href="#" class="btn btn-link") Read more
+					.item
+						p.lead.mb-3 Global Family
+						p RE/MAX builds a tight family culture which synergize and bring the best of each other.
+						a(href="#" class="btn btn-link") Read more
+					.item
+						p.lead.mb-3 Real Estate Leader
+						p The RE/MAX business is built on a entrepreneurial concept. This lucrative business can be built as big
+						a(href="#" class="btn btn-link") Read more
+					.item
+						p.lead.mb-3 Entrepreneurial Concept
+						p RE/MAX technologies create business opportunities between agents and clients. The Genius System is designed
+						a(href="#" class="btn btn-link") Read more
+					.item
+						p.lead.mb-3 Technology Excellence
+						p RE/MAX offers a wide range of training programs designed specifically for business owners.
+						a(href="#" class="btn btn-link") Read more
+					.item
+						p.lead.mb-3 With RE/MAX, Achieve Maximum Results
+						p RE/MAX is the best partner to achieving success in your property business.
+						a(href="#" class="btn btn-link") Read more
+		section.training
+			
+block scripts
+	script.

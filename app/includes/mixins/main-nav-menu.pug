@@ -2,10 +2,16 @@ mixin activeMenu(x)
 	.main-nav-menu
 		.top
 			ul
-				each val, iD in ['Home', 'About', 'Join Us Now!', 'Associates', 'Albums', 'Properties', 'Contact Us']
+				each val, iD in ['home', 'about', 'join us now!', 'associates', 'albums', 'properties', 'contact us']
 					li
 						if iD==x
 							a(href="#" class="current")= val
+						else if iD==0
+							a(href="index.html")= val
+						else if iD==2
+							a(href="joinus.html")= val
+						else if iD==6
+							a(href="contactus.html")= val
 						else
-							a(href="#")= val
+							a(href=val+".html")= val
 		.bottom

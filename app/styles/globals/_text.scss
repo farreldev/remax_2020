@@ -2,7 +2,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   font-family: $font1;
   font-weight: 700;
-  letter-spacing: normal;
+  letter-spacing: .95px;
   line-height: 1.2;
   color: $color-deep-dark;
 }
@@ -10,7 +10,6 @@ h1, h2, h3, h4, h5, h6 {
 h3 {
   &.titleSection {
     padding-bottom: 10px;
-    font-family: $font1;
     color: $color-brand-blue;
     &:after {
       position: absolute;
@@ -20,6 +19,12 @@ h3 {
       width: 20px;
       height: 2px;
       background-color: $color-brand-red;
+    }
+    &.light {
+      color: white;
+      &:after {
+        background-color: white;
+      }
     }
   }
 }
